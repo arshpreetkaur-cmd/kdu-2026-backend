@@ -45,7 +45,7 @@ class MessageSender implements Runnable{
 
         //each producer creates 5 unique messages
         for(int i=0;i<=5;i++){
-            String message = senderName + " | " + LocalDateTime.now() + " | Message " + i;
+            String message = senderName + " pushed Message " + i + " at " + LocalDateTime.now();
             queue.put(message);
             try {
                 Thread.sleep(100);  //slowing down for clarity
